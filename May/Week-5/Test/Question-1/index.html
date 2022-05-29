@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diff between var and let</title>
+    <style>
+      #var {
+        background-color: #f0f0f0;
+      }
+      #let {
+        background-color: #f0f0f0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Diffrence between Var and Let</h1>
+    <div id="var">
+      <h3>Var</h3>
+      <ol>
+        <li>var is function scoped.</li>
+        <li>var allows to redeclare variables.</li>
+        <li>Hoisting occurs in var.</li>
+      </ol>
+      <h2>Example</h2>
+      <p>
+        function greet() { <br />
+        // variable a can be used here <br />
+        var a = "hello"; console.log(a); } <br />
+        // variable a cannot be used here <br />
+        greet(); // hello
+      </p>
+    </div>
+    <div id="let">
+      <h3>Let</h3>
+      <ol>
+        <li>let is block-scoped.</li>
+        <li>let does not allow to redeclare variables.</li>
+        <li>Hoisting does not occur in let.</li>
+      </ol>
+      <h2>Example</h2>
+      <p>
+        function greet() { <br />
+        let a = "hello"; <br />
+        // variable b cannot be used here <br />
+        if (a == "hello") { <br />
+        // variable b can be used here <br />
+        let b = "world"; console.log(a + " " + b); } <br />
+        // variable b cannot be used here console.log(a + " " + b); <br />
+        // error } <br />
+        // variable a cannot be used here <br />
+        greet();
+      </p>
+    </div>
+  </body>
+</html>

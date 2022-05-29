@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>difference between null , undefined and not defined.</title>
+  </head>
+  <body>
+    <h1>Null:-</h1>
+    <p>
+      null is a reserved keyword in javascript. We can assign a null value to a
+      variable explicitly using the keyword null. Null essentially represents a
+      non-existent or an empty value i.e. we explicitly tell javascript
+      interpreter that the variable has no value.
+    </p>
+    <script>
+      let life = null;
+      console.log(life); //null
+    </script>
+
+    <h1>Undefined:-</h1>
+    <p>
+      There are certain cases when undefined value is returned in javascript as
+      follows:-
+    </p>
+    <br />
+    <p>
+      1)Whenever we declare a variable without assigning any value to it,
+      javascript implicitly assigns its value as undefined.
+    </p>
+
+    <script>
+      let name;
+      console.log(name); //undefined
+    </script>
+
+    <p>2) When value is not assigned in array or object</p>
+
+    <script>
+      let numArray = [1, 2, , 4];
+      console.log(numArray);
+      //[1, 2, empty, 4]
+      typeof numArray[2];
+      //"undefined"
+    </script>
+
+    <h1>Not defined:-</h1>
+    <p>
+      A not defined is a variable which is not declared at a given point of time
+      with declaration keyword like var, let or const.
+    </p>
+
+    <script>
+      console.log(a);
+      var a = 5;
+      //Output:- undefined
+
+      console.log(b);
+      b = 5;
+      //Output:- "ReferenceError: b is not defined
+
+      var a;
+      console.log(a); //undefined
+      a = 5;
+    </script>
+  </body>
+</html>
