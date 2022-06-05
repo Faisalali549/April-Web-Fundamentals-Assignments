@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Write a program to display the n terms of odd natural number and their
+      sum.
+    </title>
+  </head>
+  <body>
+    <h1>
+      Write a program to display the n terms of odd natural number and their
+      sum.
+    </h1>
+    <h4>Click This Button <button onclick="oddNum()">Click Here!!</button></h4>
+
+    <p id="output"></p>
+    <script>
+      function oddNum() {
+        let num = prompt("Enter number : ");
+
+        let sum = 0;
+        let ans = "";
+        if (num != null) {
+          for (let i = 1; i <= num; i++) {
+            if (i % 2 != 0) {
+              sum += i;
+              ans += i + "+";
+            }
+          }
+          document.getElementById("output").innerHTML = ans + " = " + sum;
+        } else {
+          document.getElementById("output").innerHTML = "Wrong Input";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Write a program to display the cube of the number upto given an integer.
+    </title>
+  </head>
+  <body>
+    <div>
+      <h2>
+        Write a program to display the cube of the number upto given an integer.
+      </h2>
+      <h4>
+        Click This Button <button onclick="cubeofNum()">Click Here!!</button>
+      </h4>
+
+      <p id="output"></p>
+      <script>
+        function cubeofNum() {
+          let num = prompt("Enter number : ");
+
+          let sum = 0;
+
+          let ans = "";
+
+          if (num != null) {
+            for (let i = 1; i <= num; i++) {
+              ans += i * i * i + "<br>";
+            }
+
+            document.getElementById("output").innerHTML = ans;
+          } else {
+            document.getElementById("output").innerHTML = "Wrong Input";
+          }
+        }
+      </script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      In how many types can we create functions? State the difference between
+      those types by giving examples
+    </title>
+  </head>
+  <body>
+    <div>
+      <h3 style="color: red">
+        In how many types can we create functions? State the difference between
+        those types by giving examples
+      </h3>
+      <p>
+        Functions are the bread and butter of JavaScript programming. The
+        concept of wrapping a piece of program in a value has many uses. It
+        gives us a way to structure larger programs, to reduce repetition, to
+        associate names with subprograms, and to isolate these subprograms from
+        each other.
+      </p>
+      <p>
+        The most common use of functions is to create a reusable block of code
+        that can be called from other parts of the program.
+      </p>
+      <h4>There are 3 ways of creating a function in JavaScript:</h4>
+      <ul>
+        <li>Function Declaration</li>
+        <li>Function Expression</li>
+        <li>Arrow Function</li>
+      </ul>
+      <ol>
+        <li>
+          <h4>Function Declaration:</h4>
+          Function Declaration is the traditional way to define a function. It
+          is somehow similar to the way we define a function in other
+          programming languages. We start declaring using the keyword
+          “function”. Then we write the function name and then parameters.
+          <pre>
+// Function declaration
+            function add(a, b) {		
+                console.log(a + b);
+            }
+            
+            // Calling a function
+            add(2, 3);
+            </pre>
+            <li><h4>Function Expression:</h4>Function Expression is another way to define a function in JavaScript. Here we define a function using a variable and store the returned value in that variable.</li>
+            <pre>// Function Expression
+                const add = function(a, b) {
+                    console.log(a+b);
+                }
+                
+                // Calling function
+                add(2, 3);
+                </pre>
+                <li><h4>Arrow Functions:</h4>Arrow functions are been introduced in the ES6 version of JavaScript. It is used to shorten the code. Here we do not use the “function” keyword and use the arrow symbol.</li>
+                <pre>// Single line of code
+                    let add = (a, b) => a + b;
+                    
+                    console.log(add(3, 2));
+                    </pre>
+        </li>
+      </ol>
+    </div>
+  </body>
+</html>
